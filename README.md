@@ -80,3 +80,7 @@ docker compose up --build
 | ![知华科技微信咨询二维码 1](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信咨询二维码 2](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：CMS 源码、内容管理系统、多站点管理、内容发布、Java CMS、Vue CMS、知华科技开源项目、上海如静知华信息科技有限公司。
+
+## 内容生命周期治理
+
+新增 `POST /api/cms/insights/content-lifecycle`，结合复审周期、访问量、失效链接、法务要求和责任人配置识别过期内容，输出 `HEALTHY`、`REVIEW` 或 `RETIRE_OR_BLOCK`。
