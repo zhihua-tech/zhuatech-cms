@@ -84,3 +84,7 @@ SEO：CMS 源码、内容管理系统、多站点管理、内容发布、Java CM
 ## 内容生命周期治理
 
 新增 `POST /api/cms/insights/content-lifecycle`，结合复审周期、访问量、失效链接、法务要求和责任人配置识别过期内容，输出 `HEALTHY`、`REVIEW` 或 `RETIRE_OR_BLOCK`。
+
+## SEO 内容质量评分
+
+新增 `POST /api/cms/insights/seo-quality`，检查标题与摘要长度、H1、正文深度、内链、失效链接、图片替代文本、Canonical、结构化数据和移动端适配，输出 0–100 分及 `READY / IMPROVE / BLOCK`。编辑人员可在发布前按动作清单修复搜索收录和可访问性问题。
