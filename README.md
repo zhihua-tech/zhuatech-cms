@@ -88,3 +88,7 @@ SEO：CMS 源码、内容管理系统、多站点管理、内容发布、Java CM
 ## SEO 内容质量评分
 
 新增 `POST /api/cms/insights/seo-quality`，检查标题与摘要长度、H1、正文深度、内链、失效链接、图片替代文本、Canonical、结构化数据和移动端适配，输出 0–100 分及 `READY / IMPROVE / BLOCK`。编辑人员可在发布前按动作清单修复搜索收录和可访问性问题。
+
+## 企业级内容发布治理
+
+`POST /api/enterprise/cms/publication-governance` 把编审分离、法务和隐私审批、链接可用性、无障碍、SEO 与发布时间统一为发布门禁，返回 `PUBLISH / REVIEW / BLOCKED`。详见 [发布治理说明](docs/ENTERPRISE_PUBLICATION_GOVERNANCE.md)。
