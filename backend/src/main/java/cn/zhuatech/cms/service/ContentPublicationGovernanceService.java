@@ -8,8 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ContentPublicationGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -31,13 +37,22 @@ public class ContentPublicationGovernanceService {
         return new Assessment(Decision.PUBLISH, true, blockers, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String contentId, @NotBlank String channel,
                           @NotBlank String authorId, @NotBlank String reviewerId,
                           boolean legalReviewRequired, boolean legalApproved,
                           @Min(0) @Max(100) int accessibilityScore,
                           @Min(0) @Max(100) int seoScore, @Min(0) int brokenLinks,
                           boolean personalDataApproved, boolean scheduledAtInFuture) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(Decision decision, boolean publishable, List<String> blockers,
                              List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { PUBLISH, REVIEW, BLOCKED }
 }

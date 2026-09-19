@@ -4,9 +4,15 @@ package cn.zhuatech.cms.service;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class ContentPublicationGovernanceServiceTest {
     private final ContentPublicationGovernanceService service = new ContentPublicationGovernanceService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void publishesApprovedAccessibleContent() {
         var result = service.assess(new ContentPublicationGovernanceService.Request(
             "NEWS-001", "portal", "author-a", "reviewer-b", true, true, 94, 88, 0, true, true));
@@ -14,6 +20,9 @@ class ContentPublicationGovernanceServiceTest {
         assertThat(result.publishable()).isTrue();
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void blocksMissingSeparationAndLegalApproval() {
         var result = service.assess(new ContentPublicationGovernanceService.Request(
             "NEWS-002", "portal", "same", "same", true, false, 70, 90, 2, false, true));
@@ -21,6 +30,9 @@ class ContentPublicationGovernanceServiceTest {
         assertThat(result.blockers()).hasSize(5);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void reviewsWeakSeoBeforeScheduling() {
         var result = service.assess(new ContentPublicationGovernanceService.Request(
             "NEWS-003", "portal", "author-a", "reviewer-b", false, false, 90, 60, 0, true, false));
