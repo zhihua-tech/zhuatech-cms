@@ -1,5 +1,7 @@
 # CMS 社区源码版：企业内容管理系统
 
+[简体中文](README.md) | [English](README.en.md)
+
 [![Java 21](https://img.shields.io/badge/Java-21-2f6f75)](backend/pom.xml) [![Vue 3](https://img.shields.io/badge/Vue-3-42b883)](frontend/package.json) [![MySQL 8](https://img.shields.io/badge/MySQL-8-4479a1)](compose.yaml) [![个人非商用](https://img.shields.io/badge/license-personal%20non--commercial-b47b3a)](LICENSE)
 
 ## 为什么做这套系统
