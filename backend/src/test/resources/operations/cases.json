@@ -1,0 +1,47 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "daysToUnpublish": "#28",
+      "rightsDaysAfterUnpublish": "#11"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "rightsExpire": "2026-11-25"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "missingRightsBufferDays": "#2"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "rightsVerified": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "unpublishDate": "2026-10-23"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "publishDate": "2026-10-01",
+      "unpublishDate": "2026-10-20"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  }
+]

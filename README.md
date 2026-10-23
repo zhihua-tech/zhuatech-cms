@@ -1,5 +1,13 @@
 # CMS 社区源码版：企业内容管理系统
 
+## 本次升级：内容授权期限与计划下线窗口
+
+核对发布日、计划下线日、素材授权到期和留存缓冲天数，识别已到期或素材授权早于下线的风险，不操作内容发布。
+
+新增已认证的结构化录入工作台（`/operations.html`），支持批量核算、逐条结果依据、分级复核和CSV/完整JSON导出。结果由真实后端算法计算，不是预置演示数字。所有数值精确传递，不调用外部模型。
+
+这是**只读核算**：不写库、不审批、不自动执行财务、签署、销毁或设备控制。输入条件满足不是执行授权。[算法、输入边界与接口说明](docs/OPERATIONS-REVIEW.md)。
+
 [简体中文](README.md) | [English](README.en.md)
 
 [![Java 21](https://img.shields.io/badge/Java-21-2f6f75)](backend/pom.xml) [![Vue 3](https://img.shields.io/badge/Vue-3-42b883)](frontend/package.json) [![MySQL 8](https://img.shields.io/badge/MySQL-8-4479a1)](compose.yaml) [![个人非商用](https://img.shields.io/badge/license-personal%20non--commercial-b47b3a)](LICENSE)
